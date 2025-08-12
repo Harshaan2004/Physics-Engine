@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "clang++ Debug (macOS)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/engine",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for LLDB",
+          "text": "settings set target.pretty-printing true",
+          "ignoreFailures": true
+        }
+      ],
+      "preLaunchTask": "build",
+      "logging": {
+        "moduleLoad": true,
+        "trace": true,
+        "engineLogging": true,
+        "programOutput": true,
+        "exceptions": true
+      }
+    }
+  ]
+}
